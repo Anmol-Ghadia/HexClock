@@ -18,26 +18,26 @@ This is a simple Flask application that displays the current time on a web page.
 1. Clone the repository:
 
    ```
-   git clone https://github.com/your-username/current-time-web-app.git
+   git clone https://github.com/rajtilakjee/HexClock.git
    ```
 
 2. Change into the project directory:
 
-```
-cd current-time-web-app
-```
+   ```
+   cd HexClock
+   ```
 
 3. Install the required dependencies:
 
-```
-pip install -r requirements.txt
-```
+   ```
+   pip install -r requirements.txt
+   ```
 
 4. Run the Flask application:
 
-```
-python app.py
-```
+   ```
+   python app.py
+   ```
 
 5. Open your web browser and visit http://localhost:5000 to see the application in action.
 
