@@ -36,7 +36,7 @@ This is a simple Flask application that displays the current time on a web page.
 4. Run the Flask application:
 
    ```
-   python app.py
+   python src\app.py
    ```
 
 5. Open your web browser and visit http://localhost:5000 to see the application in action.
