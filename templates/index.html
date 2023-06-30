@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function updateTime() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            
+            // Format time as #hhmmss
+            var timeFormat = '#' + hours.toString().padStart(2, '0') + minutes.toString().padStart(2, '0') + seconds.toString().padStart(2, '0');
+            
+            // Update time on the web page
+            document.getElementById('time').textContent = timeFormat;
+            
+            // Change background color based on the time
+            document.body.style.backgroundColor = timeFormat;
+        }
+        
+        setInterval(updateTime, 1000);
+    </script>
+</head>
+<body>
+    <h1 id="time">{{ current_time|format_time }}</h1>
+</body>
+</html>
