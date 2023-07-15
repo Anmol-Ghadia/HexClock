@@ -10,6 +10,10 @@ def index():
 
 @app.template_filter('format_time')
 def format_time(dt):
+    return "#" + dt.strftime('%H%M%S')
+
+@app.template_filter('format_time_regular')
+def format_time(dt):
     return dt.strftime('%H:%M:%S')
 
 if __name__ == '__main__':

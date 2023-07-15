@@ -7,11 +7,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
         }
 
-        #time {
+        #time,#timeRegular {
             color: white;
             font-size: 10vw;
             text-align: center;
@@ -27,9 +28,11 @@
             
             // Format time as #hhmmss
             var timeFormat = '#' + hours.toString().padStart(2, '0') + minutes.toString().padStart(2, '0') + seconds.toString().padStart(2, '0');
+            var timeFormatRegular = hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
             
             // Update time on the web page
             document.getElementById('time').textContent = timeFormat;
+            document.getElementById('timeRegular').textContent = timeFormatRegular;
             
             // Change background color based on the time
             document.body.style.backgroundColor = timeFormat;
@@ -39,6 +42,7 @@
     </script>
 </head>
 <body>
+    <h1 id="timeRegular">{{ current_time|format_time_regular }}</h1>
     <h1 id="time">{{ current_time|format_time }}</h1>
 </body>
 </html>
